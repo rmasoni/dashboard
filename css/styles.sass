@@ -1,0 +1,114 @@
+// Imports
+
+@import "reset.css"
+@import "bourbon"
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700)
+
+
+// Variables
+
+$font: Oswald, sans-serif
+
+$black: #000
+$white: #fff
+
+$dark: #333
+$light: #999
+
+$red: #8d2c2c
+$green: #68862d
+$blue: #2d6f99
+$yellow: #a3881a
+$orange: #a66d00
+$purple: #764787
+
+
+// Elements
+
+html
+  height: 100%
+
+body
+  background-color: $dark
+  font-family: $font
+  height: 100%
+  padding: 25px
+  +box-sizing(border-box)
+
+
+// Groups
+
+.group
+  height: 33.333333%
+  +clearfix
+
+
+// Modules
+
+.module
+  float: left
+  height: 100%
+  padding: 5px
+  +box-sizing(border-box)
+
+.content
+  box-shadow: 0 1px 2px rgba($black, .3)
+  color: rgba($white, .8)
+  height: 100%
+  text-shadow: 0 1px 5px rgba($black, .3)
+  +box-sizing(border-box)
+
+.title
+  background-color: rgba($black, .1)
+  font-size: 1.6em
+  margin-bottom: 1em
+  padding: .5em 1em
+  text-transform: uppercase
+
+.body
+  text-align: center
+
+  [data-type="number"] &
+    font:
+      size: 8em
+      weight: 400
+
+
+// Sizes
+
+.module
+
+  &[data-size="100"]
+    width: 100%
+
+  &[data-size="75"]
+    width: 75%
+
+  &[data-size="50"]
+    width: 50%
+
+  &[data-size="25"]
+    width: 25%
+
+
+// Colors
+
+.content
+
+  [data-color="red"] &
+    background-color: $red
+
+  [data-color="green"] &
+    background-color: $green
+
+  [data-color="blue"] &
+    background-color: $blue
+
+  [data-color="yellow"] &
+    background-color: $yellow
+
+  [data-color="orange"] &
+    background-color: $orange
+
+  [data-color="purple"] &
+    background-color: $purple

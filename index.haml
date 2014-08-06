@@ -1,0 +1,38 @@
+!!!
+
+%html
+  %head
+    %meta(charset="utf-8")
+    %meta(name="description" content="Modules for displaying data.")
+    %meta(name="author" content="Rafael Masoni")
+    %link(href="css/styles.css" rel="stylesheet")
+    %title Dashboard
+
+  %body
+    %div.group(data-size="3")
+      %div.module(data-size="100" data-type="number" data-color="blue")
+        %div.content
+          %header.title Revenue - July 2014
+          %section.body $ 945,123,980.10
+    %div.group(data-size="3")
+      %div.module(data-size="50" data-type="number" data-color="red")
+        %div.content
+          %header.title Unique Views - August 2014
+          %section.body 20,540
+      %div.module(data-size="25" data-type="number" data-color="yellow")
+        %div.content
+          %header.title Registered Users
+          %section.body 145
+      %div.module(data-size="25" data-type="number" data-color="orange")
+        %div.content
+          %header.title Solved Support Tickets
+          %section.body 13k
+    %div.group(data-size="3")
+      %div.module(data-size="75" data-type="number" data-color="green")
+        %div.content
+          %header.title Page Views
+          %section.body 8,978,301
+      %div.module(data-size="25" data-type="number" data-color="purple")
+        %div.content
+          %header.title Open Support Tickets
+          %section.body 3
