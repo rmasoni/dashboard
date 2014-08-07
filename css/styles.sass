@@ -30,7 +30,9 @@ html
 
 body
   background-color: $dark
-  font-family: $font
+  font:
+    family: $font
+    size: 10px
   height: 100%
   padding: 25px
   +box-sizing(border-box)
@@ -60,19 +62,24 @@ body
 
 .title
   background-color: rgba($black, .1)
-  font-size: 1.6em
-  margin-bottom: 1em
+  font-size: 2.6em
+  margin-bottom: 1.5em
+  overflow: hidden
   padding: .5em 1em
-  text-transform: uppercase
+  text:
+    overflow: ellipsis
+    transform: uppercase
+  white-space: nowrap
+  width: 100%
+  +box-sizing(border-box)
 
 .body
   text-align: center
 
   [data-type="number"] &
     font:
-      size: 8em
+      size: 16em
       weight: 400
-
 
 // Sizes
 
@@ -96,19 +103,46 @@ body
 .content
 
   [data-color="red"] &
-    background-color: $red
+    +background(linear-gradient(top, $red 0, lighten(saturate($red, 50%), 5%) 100%))
 
   [data-color="green"] &
-    background-color: $green
+    +background(linear-gradient(top, $green 0, lighten(saturate($green, 50%), 5%) 100%))
 
   [data-color="blue"] &
-    background-color: $blue
+    +background(linear-gradient(top, $blue 0, lighten(saturate($blue, 50%), 5%) 100%))
 
   [data-color="yellow"] &
-    background-color: $yellow
+    +background(linear-gradient(top, $yellow 0, lighten(saturate($yellow, 50%), 5%) 100%))
 
   [data-color="orange"] &
-    background-color: $orange
+    +background(linear-gradient(top, $orange 0, lighten(saturate($orange, 50%), 5%) 100%))
 
   [data-color="purple"] &
-    background-color: $purple
+    +background(linear-gradient(top, $purple 0, lighten(saturate($purple, 50%), 5%) 100%))
+
+
+// Media Queries
+
+@media (max-width: 1440px)
+
+  body
+    font-size: 9px
+
+  .title
+    margin-bottom: 1em
+
+@media (max-width: 1280px)
+
+  body
+    font-size: 8px
+
+  .title
+    margin-bottom: 1em
+
+@media (max-width: 1024px)
+
+  body
+    font-size: 7px
+
+  .title
+    margin-bottom: 1em
